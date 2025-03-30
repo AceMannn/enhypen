@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Enhypen Feedback Form</title>
+        <link rel="icon" type="image/x-icon" href="./icon_2n9_icon.ico">
+        <style>
+            body {
+                background: url(https://youtu.be/-kIraOyRqUw);
+                color: #FFFFFF;
+                font-family: Arial, sans-serif;
+            }
+
+            .header {
+                text-align: center;
+                color: #FFFFFF;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            .form {
+                background-color: #2C2C2E;
+                border: 2px solid #041C32;
+                border-radius: 8px;
+                max-width: 400px;
+                margin: 90px auto;
+                padding: 30px;
+                line-height: 30px;
+                text-align: left;
+                box-shadow: 0px 4px 10px rgba(4, 28, 50, 0.5);
+            }
+
+            .account > input{
+                display: inline-block;
+                width: 200px;
+                color: #FFFFFF;
+            }
+
+            label {
+                font-weight: bold;
+                display: inline-block;
+                width: 120px;
+                color: #FFFFFF;
+            }
+
+            .bias-selection > p{
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+
+            .album > p{
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+
+            .album > label, .bias-selection > label{
+                width: 250px;
+                font-weight: unset;
+            }
+
+            .comments {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                margin: auto;
+                font-size: 15px;
+            }
+
+            .comments > textarea{
+                resize: none; 
+                width: 300px;
+                height: 35px;
+                border: 1px solid #041C32;
+                background-color: #3A3A3C;
+                color: #FFFFFF;
+                border-radius: 5px;
+            }
+
+            .comments > label{
+                width: 180px;
+                text-align: center;
+            }
+
+            input, select {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #041C32;
+                background-color: #3A3A3C;
+                color: FFFFFF;
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+
+            input[type="checkbox"], input[type="radio"] {
+                width: auto;
+            }
+
+            .biophoto {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size:15px;
+            }
+
+            .biophoto > label, .location > label{
+                width: 180px;
+                margin-left: 3px;
+            }
+
+            .biophoto > input{
+                width: 235px;
+                margin-left: 18px;
+            }
+
+            .location > select{
+                color: #FFFFFF;
+            }
+
+            .submit-btn {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            button {
+                background-color: #041C32;
+                color: #FFFFFF;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            button:hover {
+                background-color: #0A3D62;
+                color: #FFFFFF;
+            }  
+
+            .video-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1;
+            }
+
+            .video-container video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .content {
+                position: relative;
+                z-index: 1;
+                color: white;
+                text-align: center;
+                font-size: 24px;
+                font-family: Arial, sans-serif;
+                margin-top: 20%;
+            }
+
+            @media (max-width: 600px) {  
+
+                form {
+                    font-size: 13px;
+                }
+                
+                .bias-selection > p, .album > p {
+                    font-size: 14px;
+                }
+
+                .account > input {
+                    width: 130px;
+                    font-size: 15px;
+                }
+
+                .biophoto > input {
+                    width: 140px;
+                    margin-left: 18px;
+                    font-size: 10px;
+                }
+
+                .biophoto > label {
+                    font-size: 14px;
+                    width: 200;
+                }
+
+                .comments > label{
+                    width: 200px;
+                    text-align: left;
+                    font-size: 12px;
+                    margin-left: 2px;
+                }
+
+                .comments > textarea{
+                    width: 250px;
+                    height: 35px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="./videoplayback.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <form class="form" action="">
+
+            <h1 class="header">Enhypen Form</h1>
+
+            <div class="account">
+                <label for="name">Name:</label>
+                <input id="name" type="text"><br>
+                <label for="email">Email:</label>
+                <input id="email" type="text"><br>
+                <label for="password">Password:</label>
+                <input id="password" type="text">
+            </div>
+            
+            <br>
+
+            <div class="bias-selection">
+                <p>Select your bias:</p>
+                <label for="Jungwon"><input id="Jungwon" type="checkbox" name="Bias" value="Jungwon"> Jungwon</label><br>
+                <label for="Heeseung"><input id="Heeseung" type="checkbox" name="Bias" value="Heeseung"> Heeseung</label><br>
+                <label for="Jay"><input id="Jay" type="checkbox" name="Bias" value="Jay"> Jay</label><br>
+                <label for="Jake"><input id="Jake" type="checkbox" name="Bias" value="Jake"> Jake</label><br>
+                <label for="Sunghoon"><input id="Sunghoon" type="checkbox" name="Bias" value="Sunghoon"> Sunghoon</label><br>
+                <label for="Sunoo"><input id="Sunoo" type="checkbox" name="Bias" value="Sunoo"> Sunoo</label><br>
+                <label for="Ni-Ki"><input id="Ni-Ki" type="checkbox" name="Bias" value="Ni-Ki"> Ni-Ki</label><br>
+            </div><br>            
+
+            <div class="album">
+                <p>What is your Favorite Album in Enhypen?</p>
+                <label for="RomanceUntold"><input id="RomanceUntold" type="radio" name="Album" value="Romance: Untold"> Romance: Untold</label><br>
+                <label for="OrangeBlood"><input id="OrangeBlood" type="radio" name="Album" value="Orange Blood"> Orange Blood</label><br>
+                <label for="DarkBlood"><input id="DarkBlood" type="radio" name="Album" value="Dark Blood"> Dark Blood</label><br>
+                <label for="Memorabilia"><input id="Memorabilia" type="radio" name="Album" value="Memorabilia"> Memorabilia</label><br>
+                <label for="ManifestoDay1"><input id="ManifestoDay1" type="radio" name="Album" value="Manifesto: Day 1"> Manifesto: Day 1</label><br>
+            </div><br>            
+
+            <div class="comments">
+                <label for="comments">Further Comments:</label><br>
+                <textarea id="comments" name="comments" rows="3" cols="30"></textarea>
+            </div><br>
+
+            <div class="biophoto">
+                <label for="bio">Bias Photos:</label>
+                <input type="file" name="biophoto" id="bio">
+            </div><br>
+
+            <div class="location">
+                <label for="location">Location visited:</label>
+                <select id="location" name="location">
+                    <option value="">Select a Location</option>
+                    <option value="new_york">New York</option>
+                    <option value="los_angeles">Los Angeles</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="houston">Houston</option>
+                </select>
+            </div>
+
+            <div class="submit-btn">
+                <button type="submit">Submit</button>
+            </div>        
+        </form>
+    </body>
+</html>
